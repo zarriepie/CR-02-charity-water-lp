@@ -123,6 +123,8 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky; /* Makes the email input stick as you scroll */
+  top: 80px; /* Adjust as needed so it sits below the header */
 }
 
 
@@ -324,6 +326,7 @@ height: auto;}
     margin: 20px 0 0 0;
     align-items: stretch;
     justify-content: center;
+    position: static; /* Not sticky on mobile */
   }
 
   .email-input {
