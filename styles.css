@@ -114,14 +114,16 @@ nav a {
 }
 
 .email-wrapper {
-  font-family: 'Montserrat', 'sans-serif'; /* or any other font you want */
+  font-family: 'Montserrat', sans-serif;
   position: relative;
   width: 100%;
   max-width: 400px;
-  margin-top: 20px;
-  margin-left: 50px;
-  display: flex; align-items: center;
+  margin: 20px auto 0 auto; /* centers horizontally */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 
 
@@ -190,12 +192,47 @@ max-width: 100%;
 height: auto;}
 
 @media (max-width: 768px) {
+  /* Hero layout: put image above text */
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse; /* image above text */
   }
 
-  .hero-image,
+  /* Center hero text content */
   .hero-text {
-    flex: 100%;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  /* Make hero image full width with some spacing */
+  .hero-image {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Make nav links stack vertically and fill width */
+  nav {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav a {
+    margin: 10px 0; /* vertical spacing */
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  /* Optional: Adjust header layout for smaller screens */
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .header-align {
+    width: 100%;
+    justify-content: space-between;
   }
 }

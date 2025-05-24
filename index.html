@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Charity: Water - Make a Difference</title>
-
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <header>
     <div class="heading">
@@ -16,11 +13,16 @@
         <a class="logo" href="https://www.charitywater.org" target="_blank">
           <img src="img/CW-logo-black.png" alt="Charity: Water Logo" />
         </a>
-        <nav>
+        <nav id="navbar" class="nav-links">
           <a href="https://www.charitywater.org/get-involved">TAKE ACTION</a>
           <a href="https://www.charitywater.org/about">ABOUT</a>
           <a href="https://www.charitywater.org/global-water-crisis">WHY WATER?</a>
         </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
       </div>
       <a href="https://www.charitywater.org/account/login" class="sign-in-button">SIGN IN</a>
     </div>
@@ -32,17 +34,20 @@
       <p>You give. We show the impact. Millions of people still live without clean water, and Charity: Water makes it
         easy to help through real stories and updates that show exactly how your donation changes lives.</p>
       <div class="email-wrapper">
-  <input type="email" placeholder="MAKE A DIFFERENCE" class="email-input" />
-  <button class="btn-yellow give-now-button">GIVE NOW</button>
-</div>
-
-
+        <input type="email" placeholder="MAKE A DIFFERENCE" class="email-input" />
+        <button class="btn-yellow give-now-button">GIVE NOW</button>
+      </div>
     </div>
     <div class="hero-image">
-      <!-- Hero image showing children helped by Charity: Water -->
       <img src="img/CW-children.jpg" alt="Children helped by Charity: Water" />
     </div>
   </section>
-</body>
 
+  <script>
+    function toggleMenu() {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('active');
+    }
+  </script>
+</body>
 </html>
